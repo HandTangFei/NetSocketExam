@@ -1,0 +1,6 @@
+1、在Exam_2目录下运行 mvn exec:java -Dexec.mainClass="com.hand.App" -Dexec.args="arg0 arg1 arg2" ，打开服务器，不按回车。
+2、在Exam_2目录下另开一个dos窗口，运行 mvn exec:java -Dexec.mainClass="com.hand.client.StartClient" -Dexec.args="arg0 arg1 arg2" 
+3、在弹出的窗口中，点击传输数据按钮。
+4、随后会弹出消息提示窗口“客户端连接到服务器12346端口”，点击确定，随后文本传出完毕，在Exam_2目录下，文件名为target.pdf。
+
+注意：本次传输的文本放在Exam_2的上级目录 NetSocketExam中，请不要删除。
