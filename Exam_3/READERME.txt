@@ -1,2 +1,2 @@
-1¡¢ÔÚExam_3Ä¿Â¼ÏÂÔËĞĞ  mvn exec:java -Dexec.mainClass="com.hand.App" -Dexec.args="arg0 arg1 arg2" £¬»Ø³µ¡£
-2¡¢¿ØÖÆÌ¨Êä³ö´ÓÍøÒ³½âÎöµÄÊı¾İ¡¢×ª»»ÎªjsonÊı¾İ¡¢×ª»»ÎªxmlÊı¾İ£¬ÔÚExam_3Ä¿Â¼ÏÂÓĞhand.json¡¢hand.xml 2¸öÎÄ¼ş¡£
+ï»¿1ã€åœ¨Exam_3ç›®å½•ä¸‹è¿è¡Œ  mvn exec:java -Dexec.mainClass="com.hand.App" -Dexec.args="arg0 arg1 arg2" ï¼Œå›è½¦ã€‚
+2ã€æ§åˆ¶å°è¾“å‡ºä»ç½‘é¡µè§£æçš„æ•°æ®ã€è½¬æ¢ä¸ºjsonæ•°æ®ã€è½¬æ¢ä¸ºxmlæ•°æ®ï¼Œåœ¨Exam_3ç›®å½•ä¸‹æœ‰hand.jsonã€hand.xml 2ä¸ªæ–‡ä»¶ã€‚
