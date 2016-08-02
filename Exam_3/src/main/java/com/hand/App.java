@@ -5,10 +5,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
 import java.io.OutputStreamWriter;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
+import java.net.URISyntaxException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -21,8 +21,8 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import org.apache.http.HttpEntity;
+import org.apache.http.HttpException;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClients;
@@ -40,9 +40,8 @@ public class App
 {  
 
 	public static void main( String[] args )
-	{
-		String[] res_spl =null;
-		System.out.println("Hello");
+	{	
+		String[] res_spl = null;
 		res_spl = parse();
 		saveAsXMl(res_spl);
 		saveAsJson(res_spl);
@@ -50,18 +49,15 @@ public class App
 	public static String[] parse(){
 		String[] res_spl =null;
 		HttpClient client = HttpClients.createDefault();  //注意HttpClients 后面多了s
-		HttpGet get = new HttpGet( "http://hq.sinajs.cn/list=sz300170");
 		try {
+			HttpGet get = new HttpGet( "http://hq.sinajs.cn/list=sz300170");
 			HttpResponse response = client.execute(get);
 			HttpEntity entity = response.getEntity();
 			String result = EntityUtils. toString(entity, "UTF-8");
-			System. out.println("解析的数据");
 			System. out.println(result);
 			res_spl = result.split(",");
 			res_spl[0] = res_spl[0].substring(21);
-		} catch (ClientProtocolException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
+		}  catch (IOException e) {
 			e.printStackTrace();       
 		}
 		
@@ -150,7 +146,7 @@ public class App
 			e.printStackTrace();
 		}
 		
-		System. out.println("\nXML格式数据");
+		System. out.println("\nJson格式数据");
 		System. out.println(lan1.toString());
 	}
 

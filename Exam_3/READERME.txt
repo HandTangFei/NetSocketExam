@@ -1,2 +1,2 @@
-1、程序能完成题目的要求，但在Exam_3目录下运行MVN文件会报错，在MyEclipse环境中运行正常。
-   如果可以，请将工程导入至Myeclipse中，谢谢丘老大。明天我试着解决一下这个问题。    
+1、在Exam_3目录下运行  mvn exec:java -Dexec.mainClass="com.hand.App" -Dexec.args="arg0 arg1 arg2" ，回车。
+2、控制台输出从网页解析的数据、转换为json数据、转换为xml数据，在Exam_3目录下有hand.json、hand.xml 2个文件。
